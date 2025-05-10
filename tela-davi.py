@@ -6,10 +6,24 @@ def limpa_tela():
 
 def exibir_tela():
     limpa_tela()
-    print("\n" + "="*40)
+    
+    # Cores ANSI
+    cor_amarela = '\033[93m'
+    cor_azul = '\033[94m'
+    cor_verde = '\033[92m'
+    cor_reset = '\033[0m'
+    
+    boneco = f"""{cor_azul}
+       [◉_◉]
+      /|\\   {cor_amarela}<-- Davi
+      / \\ 
+    {cor_reset}"""
+    
+    print(f"{cor_verde}\n" + "="*40)
     print(" " * 10 + "T E L A  D O  D A V I")
     print("="*40 + "\n")
-    print("Pressione Ctrl + C para sair.")
+    print(boneco)
+    print(f"{cor_amarela}Pressione Ctrl + C para sair.{cor_reset}")
 
 try:
     while True:
